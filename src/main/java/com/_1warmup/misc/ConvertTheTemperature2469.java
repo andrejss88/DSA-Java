@@ -1,13 +1,17 @@
 package com._1warmup.misc;
 
-import java.util.Arrays;
-
 public class ConvertTheTemperature2469 {
 
-    public static void main(String[] args) {
+//    Convert Celsius into Kelvin and Fahrenheit
+//    and return it as an array ans = [kelvin, fahrenheit]
 
-        System.out.println(Arrays.toString(convertTemperature(36.5)));
-    }
+//    Note that:
+//    Kelvin = Celsius + 273.15
+//    Fahrenheit = Celsius * 1.80 + 32.00
+
+//    Example:
+//    Input: celsius = 36.50
+//    Output: [309.65000,97.70000]
 
     public static double[] convertTemperature(double celsius) {
         double kelvin = celsius + 273.15;

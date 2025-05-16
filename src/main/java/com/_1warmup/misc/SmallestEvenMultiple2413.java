@@ -2,9 +2,8 @@ package com._1warmup.misc;
 
 public class SmallestEvenMultiple2413 {
 
-    public static void main(String[] args) {
-
-    }
+    // Given a positive integer n, return the smallest positive integer
+    // that is a multiple of both 2 and n (itself).
 
     public static int smallestEvenMultiple(int n) {
         if(n % 2 == 0) {
