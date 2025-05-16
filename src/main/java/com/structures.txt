@@ -1,0 +1,44 @@
+Arrays (static / fixed size)
+----------------------------------------------
+
+    - Unordered, Indexed collection of data
+    - Allocated a single, contiguous block of memory
+    - Fixed size lets the program allocate exactly the right amount of memory,
+        and it makes it easy to find any element’s memory address because all elements are the same size
+        and placed one after another in memory
+
+     - int[] arr = new int[4]; // Java populates empty arrs with 0's
+     - Python only has lists (dynamic arrs, no type restrictions)
+
+     - getting, inserting by index is O(1)
+     - iterating over arr is O(n) - linear time
+
+
+
+Sorted Arrays - Searching faster, at a price
+----------------------------------------------
+
+    - Faster to search than unsorted ones
+        - Linear: we can stop searching as soon as we find an entry larger than the target itself
+        - Linear: big boost (benefit) if searched value is small, small boost if value is big (we must still go through most of the array)
+        - Binary: start in middle, and keep chunking in halves until you find the value
+
+    - Faster search, but slower insert/delete (elements must be re-sorted)
+
+
+Dynamic (resizable) Arrays
+----------------------------------------------
+
+    - Not really a "new" or "separate" data structure
+    - DAs are implemented with static arrays
+        - we still pay the price of allocating a new array and throwing away the old one every time we need to resize it
+        - Key: strategy to grow and shrink underlying static arrays
+        - Strategy: Start with X size. When required: double the size, copy over all elements
+        - Java ArrayList doesn't shrink, but common shrink strategy waits until array is 75% empty before halving.
+
+    - Cost - insert (and delete) can't be O(1) as they are for static unsorted arrays.
+
+
+
+
+

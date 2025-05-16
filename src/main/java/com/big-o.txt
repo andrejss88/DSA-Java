@@ -1,0 +1,15 @@
+"Asymptotic" in simple terms means "what happens as something gets really, really big."
+
+🔍 Common Asymptotic Notations:
+
+Notation	Meaning (Simplified)        	            Example
+
+O(1)	    Constant time – always fast	                Accessing array index
+O(log n)	Logarithmic – grows slowly  	            Binary search
+O(n)	    Linear – grows directly with input size	    Simple loop
+O(n²)	    Quadratic – grows fast with input	        Nested loops. Not useable beyond about a million elements. An example is the number of pairs in an array.
+
+
+O(log n)- often means log base 2.
+
+When n=10, log2(10) ≈ 3.32 (algo grows  slowly —  only ~3 steps for 10 inputs needed)
