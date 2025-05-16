@@ -1,4 +1,4 @@
-package com._1warmup.arrays;
+package com._2easy.arrays;
 
 import java.util.stream.IntStream;
 
