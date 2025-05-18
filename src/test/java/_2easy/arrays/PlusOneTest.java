@@ -22,6 +22,7 @@ public class PlusOneTest {
 
     static Stream<Arguments> charArrayProvider() {
         return Stream.of(
+
                 // simplest - doesn't end with 9
                 Arguments.of(
                         new int[]{8},
@@ -36,29 +37,13 @@ public class PlusOneTest {
                         new int[]{7, 9, 9}
                 ),
 
-                // ends with 9 - array expansion happens
-                Arguments.of(
-                        new int[]{9},
-                        new int[]{1, 0}
-                ),
-                Arguments.of(
-                        new int[]{9, 9},
-                        new int[]{1, 0, 0}
-                ),
-                Arguments.of(
-                        new int[]{9, 9, 9},
-                        new int[]{1, 0, 0, 0}
-                ),
-
                 // single digit boundaries - no array expansion
                 Arguments.of(
                         new int[]{0},
                         new int[]{1}
                 ),
 
-                // ends with 9 - no array expansion
-
-                // only need to +1 next digit: 79 ->80; 89 -> 90
+                // only need to +1 next digit: 79 ->80; 89 -> 90 - no array expansion
                 Arguments.of(
                         new int[]{1, 9},
                         new int[]{2, 0}
@@ -76,6 +61,24 @@ public class PlusOneTest {
                 Arguments.of(
                         new int[]{9, 7, 9, 9},
                         new int[]{9, 8, 0, 0}
+                ),
+                Arguments.of(
+                        new int[]{5, 6, 9, 9},
+                        new int[]{5, 7, 0, 0}
+                ),
+
+                // ends with 9 - array expansion happens
+                Arguments.of(
+                        new int[]{9},
+                        new int[]{1, 0}
+                ),
+                Arguments.of(
+                        new int[]{9, 9},
+                        new int[]{1, 0, 0}
+                ),
+                Arguments.of(
+                        new int[]{9, 9, 9},
+                        new int[]{1, 0, 0, 0}
                 )
         );
     }
