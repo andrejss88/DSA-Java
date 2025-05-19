@@ -15,5 +15,7 @@ public class SyntaxCheatSheet {
         int[] myIntArray = {1, 2, 3};
         int [] myIntArray2 = IntStream.rangeClosed(0, 100).toArray(); // From 0 to 100
         int [] myIntArray3 =IntStream.of(12,25,36,85,28,96,47).sorted().toArray(); // Sort
+
+        // String to char[] ? -> "someStr".toCharArray();
     }
 }
