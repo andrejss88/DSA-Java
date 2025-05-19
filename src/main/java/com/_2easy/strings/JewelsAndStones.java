@@ -18,6 +18,47 @@ import java.util.List;
  */
 public class JewelsAndStones {
 
+    public static void main(String[] args) {
+        System.out.println(numJewelsInStones2ndAttempt("aA", "aAAbbbb"));
+    }
+
+    // plain brute force - apparently the fastest
+    public static int numJewelsInStones3rdAttempt(String jewels, String stones) {
+
+        int count = 0;
+        for (int i = 0; i < stones.length(); i++) {
+            for (int j = 0; j < jewels.length(); j++) {
+                if (stones.charAt(i) == jewels.charAt(j)) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    // 2nd solution - got rid of one useless conversion (stonesAsNums)
+    public static int numJewelsInStones2ndAttempt(String jewels, String stones) {
+        // still problematic - passes through entire input twice
+        // first with chars(), collecting to list takes time, then internally in HashSet
+        // this is apparently much faster - conversion to plain char array
+//        HashSet<Character> Jset = new HashSet<>();
+//        for (char j : jewels.toCharArray()) {
+//            Jset.add(j);
+//        }
+
+        HashSet<Integer> jewelsAsNums = new HashSet<>(jewels.chars().boxed().toList());
+
+        int stoneAlsoJewelCount = 0;
+
+        for (int i = 0; i < stones.length(); i++) {
+            int c = stones.charAt(i);
+            if (jewelsAsNums.contains(c)) {
+                stoneAlsoJewelCount++;
+            }
+        }
+        return stoneAlsoJewelCount;
+    }
+
     // first solution - simple but slow
     public static int numJewelsInStones(String jewels, String stones) {
         List<Integer> stonesAsNums = stones.chars().boxed().toList();
