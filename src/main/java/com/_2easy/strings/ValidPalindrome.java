@@ -1,5 +1,7 @@
 package com._2easy.strings;
 
+import java.util.regex.Pattern;
+
 /**
  * 125
  * A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
@@ -24,8 +26,11 @@ package com._2easy.strings;
  */
 public class ValidPalindrome {
 
+    private static final Pattern NON_ALPHANUMERIC = Pattern.compile("[^A-Za-z0-9]");
+
     public static boolean isPalindrome(String s) {
-        char[] arr = s.replaceAll("[^A-Za-z0-9]", "").toLowerCase().toCharArray();
+        char[] arr = NON_ALPHANUMERIC.matcher(s)
+                .replaceAll("").toLowerCase().toCharArray();
 
         if (arr.length == 0) return true;
 
@@ -34,6 +39,7 @@ public class ValidPalindrome {
         int right = arr.length - 1;
 
         while (left <= right) {
+
             if (arr[left] != arr[right]) {
                 return false;
             }
