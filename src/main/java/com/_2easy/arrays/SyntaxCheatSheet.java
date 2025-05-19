@@ -16,6 +16,18 @@ public class SyntaxCheatSheet {
         int [] myIntArray2 = IntStream.rangeClosed(0, 100).toArray(); // From 0 to 100
         int [] myIntArray3 =IntStream.of(12,25,36,85,28,96,47).sorted().toArray(); // Sort
 
-        // String to char[] ? -> "someStr".toCharArray();
+        // String to char[] ?
+        // 1) -> "someStr".toCharArray();
+        // 2) ->
+        String s = "someStr";
+        int left = 0;
+        int right = s.length() - 1;
+        while (left <= right) {
+            char currFirst = s.charAt(left);
+            char currLast = s.charAt(right);
+            // ...
+            left++;
+            right--;
+        }
     }
 }
