@@ -24,6 +24,23 @@ import java.util.HashSet;
  */
 public class PlusOne {
 
+    // best solution (not mine)
+    // can be done with a while loop too
+    public static int[] plusOneBest(int[] digits) {
+
+        for (int i = digits.length - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+
+        digits = new int[digits.length + 1];
+        digits[0] = 1;
+        return digits;
+    }
+
     public static int[] plusOne(int[] digits) {
         int lastIndex = digits.length - 1;
 
