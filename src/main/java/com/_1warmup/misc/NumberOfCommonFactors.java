@@ -4,15 +4,18 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class NumberOfCommonFactors2427 {
+/**
+ * 2427
+ * Given two positive integers a and b, return the number of common factors of a and b.
+ * An integer x is a common factor of a and b if x divides both a and b.
+ * <p>
+ * Example 1:
+ * Input: a = 12, b = 6
+ * Output: 4
+ * Explanation: The common factors of 12 and 6 are 1, 2, 3, 6
+ */
+public class NumberOfCommonFactors {
 
-//    Given two positive integers a and b, return the number of common factors of a and b.
-//    An integer x is a common factor of a and b if x divides both a and b.
-
-//    Example 1:
-//    Input: a = 12, b = 6
-//    Output: 4
-//    Explanation: The common factors of 12 and 6 are 1, 2, 3, 6
 
     public static List<Integer> findFactors(int a) {
         List<Integer> factors = new ArrayList<>();

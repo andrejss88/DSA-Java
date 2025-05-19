@@ -1,6 +1,9 @@
 package com._2easy.strings;
 
-public class LengthOfLastWord58 {
+/**
+ * 58
+ */
+public class LengthOfLastWord {
 
     // my solution - slow(ish) but clean & simple
     public static int lengthOfLastWord(String s) {
