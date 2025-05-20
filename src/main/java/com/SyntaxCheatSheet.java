@@ -1,4 +1,4 @@
-package com._2easy.arrays;
+package com;
 
 import java.util.stream.IntStream;
 
@@ -29,5 +29,10 @@ public class SyntaxCheatSheet {
             left++;
             right--;
         }
+
+        // string or char to int?
+        int implicitlyConverted = s.charAt(0) - '0';
+        // or
+        int explicitlyConverted = Character.getNumericValue(s.charAt(0));
     }
 }
