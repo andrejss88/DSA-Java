@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com._2easy.hashtables.SumOfUniqueElements.sumOfUniqueFastest;
+import static com._1easy.hashtables.SumOfUniqueElements.sumOfUniqueFastest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumOfUniqueElementsTest {

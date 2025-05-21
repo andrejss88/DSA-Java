@@ -1,6 +1,6 @@
 package _2easy.strings;
 
-import com._2easy.strings.FindFirstPalindromicStringInArray;
+import com._1easy.strings.FindFirstPalindromicStringInArray;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

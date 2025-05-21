@@ -1,5 +1,6 @@
 package com;
 
+import java.util.List;
 import java.util.stream.IntStream;
 
 public class SyntaxCheatSheet {
@@ -35,6 +36,9 @@ public class SyntaxCheatSheet {
         // or
         int explicitlyConverted = Character.getNumericValue(s.charAt(0));
 
+        // char[] to List<Character>
+        List<Character> chars = "aeiou".chars().mapToObj(c -> (char) c).toList();
+
         // Min or Max? Remember Math.min() and Math.max()
         // and that I can init and overwrite this value in a loop
 
@@ -43,5 +47,7 @@ public class SyntaxCheatSheet {
         // Frequency?
         // -> Frequency array for small inputs / constraints
         // -> Otherwise HashMap
+
+
     }
 }

@@ -2,7 +2,7 @@ package _1warmup.misc;
 
 import org.junit.jupiter.api.Test;
 
-import static com._1warmup.misc.SmallestEvenMultiple.smallestEvenMultiple;
+import static com._1easy.math.SmallestEvenMultiple.smallestEvenMultiple;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SmallestEvenMultipleTest {

@@ -2,7 +2,7 @@ package _1warmup.misc;
 
 import org.junit.jupiter.api.Test;
 
-import static com._1warmup.misc.FinalValueOfVariableAfterPerformingOperations.finalValueAfterOperations;
+import static com._1easy.math.FinalValueOfVariableAfterPerformingOperations.finalValueAfterOperations;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FinalValueOfVariableAfterPerformingOperationsTest {

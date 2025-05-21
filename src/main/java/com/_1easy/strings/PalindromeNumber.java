@@ -1,4 +1,4 @@
-package com._2easy.strings;
+package com._1easy.strings;
 
 /**
  * 9
@@ -17,6 +17,7 @@ package com._2easy.strings;
  */
 public class PalindromeNumber {
 
+    // TODO - understand the "smart" way to implement it
 
     public static boolean isPalindrome(int x) {
 

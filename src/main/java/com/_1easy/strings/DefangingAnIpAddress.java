@@ -1,4 +1,4 @@
-package com._2easy.strings;
+package com._1easy.strings;
 
 /**
  * 1108

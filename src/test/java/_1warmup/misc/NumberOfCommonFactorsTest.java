@@ -3,8 +3,8 @@ package _1warmup.misc;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com._1warmup.misc.NumberOfCommonFactors.commonFactors;
-import static com._1warmup.misc.NumberOfCommonFactors.commonFactors2;
+import static com._1easy.math.NumberOfCommonFactors.commonFactors;
+import static com._1easy.math.NumberOfCommonFactors.commonFactors2;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class NumberOfCommonFactorsTest {

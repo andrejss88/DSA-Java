@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import static com._2easy.arrays.PlusOne.plusOne;
+import static com._1easy.arrays.PlusOne.plusOne;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class PlusOneTest {

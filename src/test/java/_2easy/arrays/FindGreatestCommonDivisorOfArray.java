@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static com._2easy.arrays.FindGreatestCommonDivisorOfArray.findGCD;
+import static com._1easy.arrays.FindGreatestCommonDivisorOfArray.findGCD;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindGreatestCommonDivisorOfArray {

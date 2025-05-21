@@ -3,7 +3,7 @@ package _2easy.math;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com._1warmup.misc.AddDigits.addDigits;
+import static com._1easy.math.AddDigits.addDigits;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class AddDigitsTest {

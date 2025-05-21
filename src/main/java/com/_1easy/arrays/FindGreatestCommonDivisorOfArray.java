@@ -1,4 +1,4 @@
-package com._2easy.arrays;
+package com._1easy.arrays;
 
 /**
  * 1979

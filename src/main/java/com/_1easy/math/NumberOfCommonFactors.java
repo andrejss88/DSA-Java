@@ -1,4 +1,4 @@
-package com._1warmup.misc;
+package com._1easy.math;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static com._2easy.arrays.FizzBuzz.fizzBuzz;
+import static com._1easy.arrays.FizzBuzz.fizzBuzz;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
