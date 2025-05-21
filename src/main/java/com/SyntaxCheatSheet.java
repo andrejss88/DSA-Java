@@ -18,7 +18,7 @@ public class SyntaxCheatSheet {
 
         // String to char[] ?
         // 1) -> "someStr".toCharArray();
-        // 2) ->
+        // 2) -> like below
         String s = "someStr";
         int left = 0;
         int right = s.length() - 1;
@@ -34,5 +34,14 @@ public class SyntaxCheatSheet {
         int implicitlyConverted = s.charAt(0) - '0';
         // or
         int explicitlyConverted = Character.getNumericValue(s.charAt(0));
+
+        // Min or Max? Remember Math.min() and Math.max()
+        // and that I can init and overwrite this value in a loop
+
+        // Unique or duplicates? Think HashSet or HashMap
+
+        // Frequency?
+        // -> Frequency array for small inputs / constraints
+        // -> Otherwise HashMap
     }
 }
