@@ -1,6 +1,8 @@
 package com._2easy.hashtables;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -48,6 +50,7 @@ public class SumOfUniqueElements {
 
     // beats 75% runtime, 15% memory
     // core improvement - manage everything in a single iteration
+    // HashSet's contains(), add() are O(1)
     public static int sumOfUniqueFaster(int[] nums) {
 
         Set<Integer> set = new HashSet<>();
@@ -93,6 +96,29 @@ public class SumOfUniqueElements {
             sum += num;
         }
 
+        return sum;
+    }
+
+    // asked ChatGpt for this one out of curiosity
+    public static int sumOfUniqueWithMap(int[] nums) {
+
+        Map<Integer, Integer> freq = new HashMap<>();
+        int sum = 0;
+        for (int num : nums) {
+//      Returns the value to which the specified key is mapped,
+//      or defaultValue if this map contains no mapping for the key.
+//      so if we already have a value - return it, if not seen yet - 0
+            int count = freq.getOrDefault(num, 0);
+            if (count == 0) {
+                // First time seeing this number — add to sum
+                sum += num;
+            } else if (count == 1) {
+                // Seen exactly once before — remove from sum
+                sum -= num;
+            }
+            // Update frequency
+            freq.put(num, count + 1);
+        }
         return sum;
     }
 }
