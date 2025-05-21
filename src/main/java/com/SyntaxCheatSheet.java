@@ -35,6 +35,8 @@ public class SyntaxCheatSheet {
         int implicitlyConverted = s.charAt(0) - '0';
         // or
         int explicitlyConverted = Character.getNumericValue(s.charAt(0));
+        // or
+        int firstDigit = Character.getNumericValue(String.valueOf(123).charAt(0));
 
         // char[] to List<Character>
         List<Character> chars = "aeiou".chars().mapToObj(c -> (char) c).toList();
