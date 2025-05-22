@@ -51,12 +51,7 @@ public class ShuffleArray {
     public static int[] shuffleInPlace(int[] nums, int n) {
 
 
-        int toLeft = n - 1;
-        int toRight = 1;
-
-        int savedElementOnLeft = nums[n - toLeft];
-        nums[n - toLeft] = nums[n];
-        nums[n - toLeft + toRight] = savedElementOnLeft;
+        // TODO - implement "in place"
 
         return nums;
     }
