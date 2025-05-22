@@ -31,6 +31,7 @@ public class SyntaxCheatSheet {
             right--;
         }
 
+        // char to code point? (int) 'K'
         // string or char to int?
         int implicitlyConverted = s.charAt(0) - '0';
         // or
