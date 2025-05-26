@@ -1,1 +1,5 @@
 1) ALWAYS solve the solution "on paper" or in plain English instructions FIRST!
+
+2) For LeetCode, any solution using Integer or other wrapper is almost always a slow solution.
+
+    - HashMap<Integer,Integer>? -> use frequency array
