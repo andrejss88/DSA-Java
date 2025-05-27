@@ -17,7 +17,7 @@ public class LuckyNumbersMatrix {
 // ]
 
     public static void main(String[] args) {
-        var result = luckyNumbers2(new int[][]{
+        var result = luckyNumbers3(new int[][]{
                         {3, 7, 8},
                         {9, 13, 11},
                         {15, 16, 17}
@@ -48,6 +48,44 @@ public class LuckyNumbersMatrix {
         }
         // update array at END
         System.out.println(minVal + " : " + minIndex);
+    }
+
+    // NOT MY solution (made minor improvements)
+    // Similar but better: once we find minVal and its index
+    // determine lucky number WITHOUT leaving the main loop
+    // 1ms, Runtime beats 95%, Memory beats 41%
+    public static List<Integer> luckyNumbers3(int[][] matrix) {
+        List<Integer> ans = new ArrayList<>();
+        int rowLength = matrix[0].length;
+
+        for (int[] row : matrix) {
+            // Find the min in each row
+            // Assume 1st el is min, override later
+            int rowMin = row[0];
+            int rowMinIndex = 0;
+            // start from 2nd el
+            for (int j = 1; j < rowLength; j++) {
+                if (row[j] < rowMin) {
+                    rowMin = row[j];
+                    rowMinIndex = j;
+                }
+            }
+
+            // Check if the min element in row is max in its column
+            boolean isLucky = true;
+            for (int[] matrixRow : matrix) {
+                if (matrixRow[rowMinIndex] > rowMin) {
+                    isLucky = false;
+                    break;  // without break, runtime down to 2ms
+                }
+            }
+
+            if (isLucky) {
+                ans.add(rowMin);
+            }
+        }
+
+        return ans;
     }
 
     // same high-level logic - first collect mins and their indexes, then loop again and exclude
