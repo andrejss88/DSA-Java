@@ -1,0 +1,53 @@
+Linear data structures: arrays, strings, Linked Lists
+========================
+
+Two pointers:
+---------------------
+
+    Why?
+        - May reduce O(n^2) (with nested loops) to O(n)
+
+    What?
+        - Use two indices to traverse or compare parts of the array.
+        - Towards to/Away from each other, in the same direction, depending on the problem
+
+    Variants:
+        - Converging pointers: Move TOWARDS each other - e.g. for palindrome
+        - Parallel pointers: Start at same end, move in same direction.
+            -> Sliding Window is a variation of this
+        - Trigger-based Pointers: start moving i, when criteria met, start moving next one
+
+    - Common in: sorting, reversing, duplicates, partitioning.
+
+Resources:
+    - https://www.youtube.com/watch?v=QzZ7nmouLTI
+    - https://www.hellointerview.com/learn/code/two-pointers/overview
+
+Sliding Window:
+---------------------
+
+    - Variation ot two pointers starting from one end
+
+    - Variants:
+        - Fixed (constant length)
+        - Dynamic (variable-size)
+
+    - If you know the length of the subsequence you are looking for, use a fixed-length sliding window.
+            Otherwise, use a variable-length sliding window.
+
+    - Common in: max/min subarrays, longest/shortest sequences, averages.
+
+Resources:
+    - https://www.youtube.com/watch?v=y2d0VHdvfdc
+    - https://www.hellointerview.com/learn/code/sliding-window/variable-length
+
+Prefix Sum
+---------------------
+    - Precompute cumulative sums to answer range queries efficiently.
+    - Common in: subarray sums, range difference, frequency counters.
+
+
+Binary Search
+---------------------
+    - Use on SORTED arrays or when searching for a condition in a range.
+    - Common in: peak finding, first/last occurrence, optimization problems.

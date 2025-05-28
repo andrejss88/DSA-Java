@@ -3,3 +3,36 @@
 2) For LeetCode, any solution using Integer or other wrapper is almost always a slow solution.
 
     - HashMap<Integer,Integer>? -> use frequency array
+
+ASCII
+
+    - A-Z: 65-90
+    - a-z: 97-122
+
+to cast - (int) 'a'
+
+2) Math tricks:
+    To get last digit           - num % 10
+    To get 2nd from right digit - num % 100 / 10
+    To get 3rd from right digit - num % 1000 / 100
+
+Alternatively:
+    Given n is a number with many digits that need to be split up (and put into array):
+    while (n > 0) {
+        int digit = n % 10;  // get the digit (remainder) from left
+        n /= 10;            // chop off the digit from left (divide and truncate decimal)
+
+        // populate int[] array if needed
+}
+
+To concatenate two ints (instead of to String and back to int):
+    a * 10 + b
+
+
+What I learned reasonably well:
+=====================================
+
+    - Arrays / Strings
+    - Two pointers
+    - "Frequency arrays" instead of HashMaps
+    - Some math tricks (chunking off from the right using modulo and division)
