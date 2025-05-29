@@ -46,6 +46,12 @@ Prefix Sum
     - Precompute cumulative sums to answer range queries efficiently.
     - Common in: subarray sums, range difference, frequency counters.
 
+Given arr[] = {1,2,3,4}
+
+Then prefixSumArr[] = {1, 3, 6, 10},
+
+    because: (1, 1+ 2, , 1+2+3, 1+2+3+4)
+
 
 Binary Search
 ---------------------

@@ -14,7 +14,7 @@ public class ShuffleString {
     }
 
     // 1ms, Beats 69% runtime, 40% memory
-    // Only thin that makes it faster (0ms) in LeetCode is
+    // Only thing that makes it faster (0ms) in LeetCode is
     // changing String.valueOf(str) -> new String(str);
     public static String restoreString(String s, int[] indices) {
 
