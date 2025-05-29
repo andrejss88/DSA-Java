@@ -34,5 +34,14 @@ What I learned reasonably well:
 
     - Arrays / Strings
     - Two pointers
-    - "Frequency arrays" instead of HashMaps
     - Some math tricks (chunking off from the right using modulo and division)
+    - "Frequency arrays" instead of HashMaps
+
+        Both index[i] and set.contains() (or similar) have O(1) complexity, but VERY different in speed.
+
+        Big-O measures SCALABILITY, ie how perf grows with input SIZE, not how long something takes in absolute terms
+            - array[i]          - direct memory access - 1 CPU instruction
+            - set.contains()    - Hash compute + table lookup + equals check, ca. 5x-10x slower
+
+
+
