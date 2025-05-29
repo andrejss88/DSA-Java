@@ -44,4 +44,8 @@ What I learned reasonably well:
             - set.contains()    - Hash compute + table lookup + equals check, ca. 5x-10x slower
 
 
+    - THINK LinkedHashMap and LinkedHashSet when I must think about the insertion order
+    - Tracking uniqueness with a MAP?
+        - if map.containsKey() --> map.put(val, false)
+            --> you end up with a map
 
