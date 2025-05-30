@@ -33,15 +33,17 @@ public class KthDistinctStringInArray {
 
         Map<String, Integer> map = new LinkedHashMap<>();
 
-        // TODO - simplify map population with map.getOrDefault() and map.merge()
-        // -> https://leetcode.com/problems/kth-distinct-string-in-an-array/solutions/5567370/o-n-5-approach-beats-100-java-c-python-go-rust-javascript/
 
         for (String s : arr) {
-            if (map.containsKey(s)) {
-                map.put(s, map.get(s) + 1);
-            } else {
-                map.putIfAbsent(s, 1);
-            }
+            //cleaner, but with this, Runtime becomes 7ms and "beats 47%"
+            map.put(s, map.getOrDefault(s, 0) + 1);
+
+//  more verbose, but saves "1ms" making the difference between "beats 47%" and "beats 91%"
+//            if (map.containsKey(s)) {
+//                map.put(s, map.get(s) + 1);
+//            } else {
+//                map.putIfAbsent(s, 1);
+//            }
         }
 
         int counter = 1;
