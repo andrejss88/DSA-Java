@@ -33,7 +33,8 @@ public class SyntaxCheatSheet {
 
         // char to code point? (int) 'K'
         // string or char to int?
-        int implicitlyConverted = s.charAt(0) - '0';
+        System.out.println('9' - '0');  // 9 as int
+        System.out.println('b' - 'a');  // 1 - the ASCII code point of char 'b' (98-97=1)
         // or
         int explicitlyConverted = Character.getNumericValue(s.charAt(0));
         // or
@@ -42,15 +43,10 @@ public class SyntaxCheatSheet {
         // char[] to List<Character>
         List<Character> chars = "aeiou".chars().mapToObj(c -> (char) c).toList();
 
-        // Min or Max? Remember Math.min() and Math.max()
-        // and that I can init and overwrite this value in a loop
-
         // Unique or duplicates? Think HashSet or HashMap
 
         // Frequency?
         // -> Frequency array for small inputs / constraints
         // -> Otherwise HashMap
-
-
     }
 }
