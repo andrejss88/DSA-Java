@@ -5,19 +5,16 @@ import java.util.Map;
 
 /**
  * 2206
- *
+ * <p>
  * You are given an integer array nums consisting of 2 * n integers.
- *
  * You need to divide nums into n pairs such that:
- *
+ * <p>
  * Each element belongs to exactly one pair.
  * The elements present in a pair are equal.
  * Return true if nums can be divided into n pairs, otherwise return false.
- *
- *
- *
+ * <p>
  * Example 1:
- *
+ * <p>
  * Input: nums = [3,2,3,2,2,2]
  * Output: true
  * Explanation:
@@ -31,13 +28,13 @@ public class DivideArrayIntoEqualPairs {
         // create frequency array of size 500 (indexes 0-499)
         int[] freqArr = new int[500];
 
-        for(int num : nums) {
+        for (int num : nums) {
             int i = num - 1;
             freqArr[i] = ++freqArr[i];
         }
 
-        for(int num : freqArr) {
-            if(num % 2 != 0) {
+        for (int num : freqArr) {
+            if (num % 2 != 0) {
                 return false;
             }
         }
@@ -50,19 +47,19 @@ public class DivideArrayIntoEqualPairs {
 
         Map<Integer, Integer> map = new HashMap<>();
 
-        for(int num : nums) {
+        for (int num : nums) {
             // new number, start counting
-            if(!map.containsKey(num)) {
+            if (!map.containsKey(num)) {
                 map.put(num, 1);
             } else {
-            // we've seen this number, increment count
+                // we've seen this number, increment count
                 int value = map.get(num);
                 map.put(num, ++value);
             }
         }
 
-        for(int value : map.values()) {
-            if(value % 2 != 0) {
+        for (int value : map.values()) {
+            if (value % 2 != 0) {
                 return false;
             }
         }

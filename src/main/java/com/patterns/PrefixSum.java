@@ -16,7 +16,7 @@ public class PrefixSum {
         // start from 2nd val
         for (int i = 1; i < arr.length; i++) {
             // previous from pfx + current from original
-            pfx[i] = pfx[i - 1]+ arr[i];
+            pfx[i] = pfx[i - 1] + arr[i];
         }
 
         // [1,3,6,10,15]
