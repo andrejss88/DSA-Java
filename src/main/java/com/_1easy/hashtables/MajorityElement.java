@@ -19,10 +19,32 @@ import java.util.Map;
 public class MajorityElement {
 
     public static void main(String[] args) {
-        System.out.println(majorityElement(new int[]{3, 2, 3}));
+        System.out.println(majorityElementFaster(new int[]{3, 2, 3}));  // 3
 
-        System.out.println(majorityElement(new int[]{2, 2, 1, 1, 1, 2, 2}));
+        System.out.println(majorityElementFaster(new int[]{2, 2, 1, 1, 1, 2, 2}));  // 2
+    }
 
+    // 12ms, Beats Runtime 36%
+    public static int majorityElementFaster(int[] nums) {
+
+        int majority = nums.length / 2;
+
+        Map<Integer, Integer> map = new HashMap<>();
+
+        for (int num : nums) {
+            int val = map.getOrDefault(num, 0) + 1;
+
+            // if we happen to stumble upon majority value early - leave early
+            if(val > majority) return num;
+
+            map.put(num, val);
+        }
+
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            if(entry.getValue() > majority) return entry.getKey();
+        }
+
+        return -1;
     }
 
     // 13ms, Beats Runtime 29%, LeetCode AI says Time Comp O(n)
