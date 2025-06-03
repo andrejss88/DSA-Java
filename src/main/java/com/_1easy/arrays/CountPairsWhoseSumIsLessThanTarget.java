@@ -1,5 +1,6 @@
 package com._1easy.arrays;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,13 +20,44 @@ import java.util.List;
 public class CountPairsWhoseSumIsLessThanTarget {
 
     public static void main(String[] args) {
-        System.out.println(countPairs(List.of(-1, 1, 2, 3, 1), 2));  // 3
-        System.out.println(countPairs(List.of(-6, 2, 5, -2, -7, -1, 3), -2));  // 10
+
+        List<Integer> list1 = new ArrayList<>(List.of(-1, 1, 2, 3, 1));
+        List<Integer> list2 = new ArrayList<>(List.of(-6, 2, 5, -2, -7, -1, 3));
+        List<Integer> list3 = new ArrayList<>(List.of(6, -1, 7, 4, 2, 3));
+        List<Integer> list4 = new ArrayList<>(List.of(9, -5, -5, 5, -5, -4, -6, 6, -6));
+
+        System.out.println(countPairsFaster(list4, 3));  // 27, not 25
+        System.out.println(countPairsFaster(list3, 8)); // 8
+        System.out.println(countPairsFaster(list1, 2));  // 3
+        System.out.println(countPairsFaster(list2, -2));  // 10
+
     }
 
-    // TODO - Sort and Binary Search Solution? - Study fastest solution
+    // 3ms? Beats Runtime 44%
+    // most likely due to tiny constraints
+    // Current constraints → Brute-force wins
+    // If n ≥ ~1,000+ → Two-pointer starts to win
+    public static int countPairsFaster(List<Integer> nums, int target) {
 
-    // 2ms, Beats Runtime 96%
+        nums.sort(Integer::compareTo);
+        int count = 0;
+        int left = 0;
+        int right = nums.size() - 1;
+
+        while (left < right) {
+            if (nums.get(left) + nums.get(right) < target) {
+                // all elements between left and right form valid pairs
+                count += (right - left);
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return count;
+    }
+
+    // 2ms, Beats Runtime 96%,
     public static int countPairs(List<Integer> nums, int target) {
 
         int count = 0;
