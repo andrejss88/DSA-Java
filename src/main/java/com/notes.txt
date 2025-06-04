@@ -43,6 +43,7 @@ What I learned reasonably well:
             - array[i]          - direct memory access - 1 CPU instruction
             - set.contains()    - Hash compute + table lookup + equals check, ca. 5x-10x slower
 
+        The 349 - replacing 2 loops with ONE loop may still be slower if that single loop has too many hashing actions - .contains()., .add(), etc.
 
     - THINK LinkedHashMap and LinkedHashSet when I must think about the insertion order
     - Tracking uniqueness with a MAP?
