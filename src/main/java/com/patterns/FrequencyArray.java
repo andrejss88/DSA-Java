@@ -18,7 +18,7 @@ public class FrequencyArray {
         System.out.println("Char frequencies: " + Arrays.toString(strFreqArray)); // [1, 1, 2, 3, 0, 0, ...]
 
 
-        // Number
+        // Number - BEST USED ON CONSTRAINTS 0<=n
         int[] nums = new int[]{0, 5, 4, 2, 2, 1, 3, 10, 10, 10};
         int[] numFreqArray = new int[11];  // given the constraint of max 10, create arr of length 11
         int[] numFreqArray2 = new int[11];
@@ -34,5 +34,17 @@ public class FrequencyArray {
 
         System.out.println("Num frequencies:   " + Arrays.toString(numFreqArray));
         System.out.println("Num frequencies 2: " + Arrays.toString(numFreqArray2));
+
+        // Number - incl. NEGATIVE numbers
+        int offset = 10;  // half of freqArr length
+        int[] negPosFreqArray = new int[21];
+
+        int[] negPosNums = new int[] {-3,-2,-1,3};
+        for (int num : negPosNums) {
+            negPosFreqArray[num + offset]++;
+        }
+
+        System.out.println("NegPos frequencies: " + Arrays.toString(negPosFreqArray));
+
     }
 }
