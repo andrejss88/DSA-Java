@@ -19,14 +19,20 @@ public class FrequencyArray {
 
 
         // Number
-        int[] nums = new int[]{0, 5, 4, 2, 2, 1, 3};
-        int[] numFreqArray = new int[10];  // or whatever the constraint for nums[i] max value
+        int[] nums = new int[]{0, 5, 4, 2, 2, 1, 3, 10, 10, 10};
+        int[] numFreqArray = new int[11];  // given the constraint of max 10, create arr of length 11
+        int[] numFreqArray2 = new int[11];
 
+        // BETTER and simpler than V2 below
         for (int num : nums) {
-            int i = num;  // -1 if num[i] starts at 1
-            numFreqArray[i] = ++numFreqArray[i];
+            numFreqArray[num]++;
         }
 
-        System.out.println("Num frequencies: " + Arrays.toString(numFreqArray));
+        for (int num : nums) {
+            numFreqArray2[num] = ++numFreqArray2[num];
+        }
+
+        System.out.println("Num frequencies:   " + Arrays.toString(numFreqArray));
+        System.out.println("Num frequencies 2: " + Arrays.toString(numFreqArray2));
     }
 }
