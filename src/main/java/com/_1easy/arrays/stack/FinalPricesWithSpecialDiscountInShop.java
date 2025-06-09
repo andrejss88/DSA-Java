@@ -1,6 +1,8 @@
 package com._1easy.arrays.stack;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 /**
  * 1475
@@ -23,9 +25,29 @@ import java.util.Arrays;
 public class FinalPricesWithSpecialDiscountInShop {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(finalPrices(new int[]{8, 4, 6, 2, 3})));
+        System.out.println(Arrays.toString(finalPricesFaster(new int[]{8, 4, 6, 2, 3})));  // [4, 2, 4, 2, 3]
         System.out.println(Arrays.toString(finalPrices(new int[]{1, 2, 3, 4, 5})));
         System.out.println(Arrays.toString(finalPrices(new int[]{10, 1, 1, 6})));
+    }
+
+    // not my solution
+    // Using "Monotonic decreasing stack pattern"
+    public static int[] finalPricesFaster(int[] prices) {
+        int n = prices.length;
+        int[] result = new int[n];
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        for (int i = 0; i < n; i++) {
+            // While the stack is not empty and current price is less than or equal to the price at stack's top index
+            while (!stack.isEmpty() && prices[stack.peek()] >= prices[i]) {
+                int index = stack.pop();  // get the latest (previously iterated over) index of a bigger number
+                result[index] = prices[index] - prices[i];  // at the older index - overwrite with discount
+            }
+            stack.push(i);  // populate the stack with indexes, it will be used in the while() above soon enough
+            result[i] = prices[i]; // default price in case no discount is found, this will be overwritten in while() above too
+        }
+
+        return result;
     }
 
 

@@ -25,6 +25,26 @@ public class CheckIfNumbersAreAscendingInSentence {
                 "s r j m y m y n f m z u y i v z p g e l e p e p q r r d x f p b s j n x v t i s h r y u y a b y 6"));
     }
 
+    // NOT my solution - with a bit of logic,
+    // it's enough to check if the FIRST char is a number
+    public static boolean areNumbersAscendingSimplest(String s) {
+
+        int previous = 0;
+        String[] words = s.split(" ");
+
+        for (String str : words) {
+            if (Character.isDigit(str.charAt(0))) {  // guaranteed to be a number
+                int number = Integer.parseInt(str);
+
+                if (number <= previous)
+                    return false;
+
+                previous = number;
+            }
+        }
+        return true;
+    }
+
     // also 1ms
     public static boolean areNumbersAscending2(String s) {
 
