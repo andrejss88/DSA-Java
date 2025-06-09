@@ -59,3 +59,19 @@ TreeSet
     O(log n) for insertion, deletion, search
 
     MUCH MUCH FASTER than Arrays.sort()'s O(n log n), thus best when DUPLICATES are not allowed
+
+
+Stack
+----------------------------------------------
+
+In Java:
+
+    Deque<Integer> stack = new ArrayDeque<>();
+
+    Stands for "Double-Ended Queue", pronounced as "Deck"
+
+    A linear collection that supports element insertion and removal at BOTH ENDS.
+
+    Can replace LinkedList (for Queue, FIFO) and Stack (Stack, LIFO)
+    Can add/remove FIRST And LAST elements
+    Can also "examine" (look without removing) first/last

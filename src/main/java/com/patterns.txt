@@ -57,3 +57,22 @@ Binary Search
 ---------------------
     - Use on SORTED arrays or when searching for a condition in a range.
     - Common in: peak finding, first/last occurrence, optimization problems.
+
+
+
+Monotonic Stack
+---------------------
+
+    A stack with either INCREASING or DECREASING elements
+
+    Increasing Stack       Decreasing Stack
+    (Top)                  (Top)
+       9                       1
+       4                       4
+       1                       9
+    (Bottom)              (Bottom)
+
+    Increasing stack for finding: next or previous smaller element
+    Decreasing stack for finding: next or previous greater element
+
+    In most cases - use stack to store indices of array values that you go through
