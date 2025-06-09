@@ -51,7 +51,7 @@ Linked Lists
 
 
 
-TreeSet
+TreeSet and TreeMap
 ----------------------------------------------
 
     Maintains natural order
@@ -59,6 +59,15 @@ TreeSet
     O(log n) for insertion, deletion, search
 
     MUCH MUCH FASTER than Arrays.sort()'s O(n log n), thus best when DUPLICATES are not allowed
+
+    To iterate backwards (from highest):
+        Set - treeSet.descendingIterator();
+        Iterator<String> iterator2 = treeSet.descendingIterator();
+            while(iterator2.hasNext()) {
+                System.out.println(iterator2.next());
+            }
+
+        Map - Map.Entry<Integer, Integer> entry : scores.descendingMap().entrySet()
 
 
 Stack

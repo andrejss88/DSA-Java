@@ -1,6 +1,6 @@
 package com;
 
-import java.util.List;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class SyntaxCheatSheet {
@@ -48,5 +48,25 @@ public class SyntaxCheatSheet {
         // Frequency?
         // -> Frequency array for small inputs / constraints
         // -> Otherwise HashMap
+
+
+        TreeSet<Integer> treeSet = new TreeSet<>(Arrays.asList(1, 3, 5, 7, 9));
+
+        // Backward Iteration (just treeSet for forward)
+        System.out.println("TreeSet Backward:");
+        for (Integer num : treeSet.descendingSet()) {
+            System.out.println(num);
+        }
+
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+        treeMap.put(1, "One");
+        treeMap.put(3, "Three");
+        treeMap.put(5, "Five");
+
+        // Backward Iteration (forward without .descendingMap())
+        System.out.println("\nTreeMap Backward:");
+        for (Map.Entry<Integer, String> entry : treeMap.descendingMap().entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
     }
 }

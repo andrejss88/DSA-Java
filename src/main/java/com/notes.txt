@@ -46,6 +46,7 @@ What I learned reasonably well:
         The 349 - replacing 2 loops with ONE loop may still be slower if that single loop has too many hashing actions - .contains()., .add(), etc.
 
     - THINK LinkedHashMap and LinkedHashSet when I must think about the insertion order
+    - THINK TreeSet when I want to insert and get things sorted immediately
     - Tracking uniqueness with a MAP?
         - if map.containsKey() --> map.put(val, false)
             --> you end up with a map
