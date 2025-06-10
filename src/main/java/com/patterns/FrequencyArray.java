@@ -10,9 +10,8 @@ public class FrequencyArray {
         String s = "abccddd";
         int[] strFreqArray = new int[26];
         for (int i = 0; i < s.length(); i++) {
-            char letter = s.charAt(i);
-            int index = letter - 'a';
-            strFreqArray[index] = ++strFreqArray[index];
+            int index = s.charAt(i) - 'a';  // given 'a', then 'a' - 'a' -> 0 index
+            strFreqArray[index]++;
         }
 
         System.out.println("Char frequencies: " + Arrays.toString(strFreqArray)); // [1, 1, 2, 3, 0, 0, ...]
