@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 
 import static com._1easy.arrays.SquaresOfSortedArray.sortedSquaresFaster;
-import static com.patterns.sorting.SortingAlgos.selectionSort;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class SquaresOfSortedArrayTest {

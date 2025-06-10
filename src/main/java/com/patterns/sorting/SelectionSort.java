@@ -1,10 +1,8 @@
 package com.patterns.sorting;
 
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
-public class SortingAlgos {
+public class SelectionSort {
 
     public static void main(String[] args) {
 

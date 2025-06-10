@@ -3,7 +3,6 @@ package com._1easy.arrays.heap;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class RelativeRanks {
     public static void main(String[] args) {

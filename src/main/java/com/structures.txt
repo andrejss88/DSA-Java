@@ -55,9 +55,7 @@ TreeSet and TreeMap
 ----------------------------------------------
 
     Maintains natural order
-
     O(log n) for insertion, deletion, search
-
     MUCH MUCH FASTER than Arrays.sort()'s O(n log n), thus best when DUPLICATES are not allowed
 
     To iterate backwards (from highest):
@@ -68,6 +66,16 @@ TreeSet and TreeMap
             }
 
         Map - Map.Entry<Integer, Integer> entry : scores.descendingMap().entrySet()
+
++--------------------------+---------------------------------------+-----------------------------------+
+| Data Structure           | When to Use                           | Ordering                          |
++--------------------------+---------------------------------------+-----------------------------------+
+| HashMap / HashSet        | Fast lookups, order doesn't matter     | No ordering guaranteed            |
+| LinkedHashMap / HashSet  | Maintain insertion order               | Order of insertion matters         |
+| TreeMap / TreeSet        | Need sorted keys/values                | Natural order or custom comparator |
++--------------------------+---------------------------------------+-----------------------------------+
+
+
 
 
 Stack

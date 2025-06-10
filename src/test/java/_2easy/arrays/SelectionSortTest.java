@@ -7,10 +7,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import static com.patterns.sorting.SortingAlgos.selectionSort;
+import static com.patterns.sorting.SelectionSort.selectionSort;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class SortingAlgosTest {
+public class SelectionSortTest {
 
     @ParameterizedTest
     @MethodSource("inputProvider")
