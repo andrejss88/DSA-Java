@@ -45,6 +45,37 @@ Dynamic (resizable) Arrays
 Linked Lists
 ----------------------------------------------
 
+Not considering traversal:
+
++-----------------------------+-------------------------+-----------------------------+
+|          Scenario           |        ArrayList        |         LinkedList          |
++-----------------------------+-------------------------+-----------------------------+
+| Random access               | Fast (O(1))             | Slow (O(n))                 |
+| Insertion at end            | Fast (amortized O(1))   | Fast (O(1))                 |
+| Insertion in middle         | Slow (O(n))             | Fast (O(1))                 |
+| Deletion in middle          | Slow (O(n))             | Fast (O(1))                 |
+| Memory usage                | Lower overhead          | Higher overhead             |
+| Iteration                   | Fast                    | Fast                        |
+| When to use                 | Frequent random access  | Frequent insert/delete      |
+|                             | and appending           | in beginning or middle      |
++-----------------------------+-------------------------+-----------------------------+
+
+Considering traversal:
+
++--------------------------+-------------------------+-------------------------+
+| Operation                | ArrayList               | LinkedList              |
++--------------------------+-------------------------+-------------------------+
+| Access by index          | O(1)                    | O(n)                    |
+| Insert at end            | Amortized O(1)          | O(1)                    |
+| Insert at middle         | O(n)                    | O(n)*                   |
+| Insert at head           | O(n)                    | O(1)                    |
+| Remove from end          | O(1)                    | O(n)                    |
+| Remove from middle       | O(n)                    | O(n)*                   |
+| Remove from head         | O(n)                    | O(1)                    |
+| Memory efficiency        | Better                  | Worse (extra node links)|
+| Iteration                | Faster (cache friendly) | Slower                  |
++--------------------------+-------------------------+-------------------------+
+
 
 
 
