@@ -1,4 +1,4 @@
-package com._1easy.arrays;
+package com._1easy.arrays.prefixsum;
 
 import java.util.Arrays;
 
