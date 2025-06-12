@@ -1,7 +1,6 @@
-package _2easy.arrays;
+package com._1easy.arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

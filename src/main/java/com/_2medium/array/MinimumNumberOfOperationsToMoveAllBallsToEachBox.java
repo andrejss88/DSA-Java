@@ -26,9 +26,9 @@ public class MinimumNumberOfOperationsToMoveAllBallsToEachBox {
         System.out.println(Arrays.toString(minOperations("001011")));
     }
 
-    //i 0,1,2,3,4,5
-    // [0,0,1,0,1,1]
-    // [11,8,5,4,3,4] -> (2 + 4 + 5), (1 + 3 + 4), (0 + 2 + 3),
+    // i (pfx): [0 ,1,2,3,4,5]
+    // orig   : [0 ,0,1,0,1,1]
+    // ans    : [11,8,5,4,3,4] -> (2 + 4 + 5), (1 + 3 + 4), (0 + 2 + 3),
 
     // loop again, and for each index
     // i:0 -> abs(2-i) + abs(4-i) + abs(5-i) = 11
@@ -36,8 +36,21 @@ public class MinimumNumberOfOperationsToMoveAllBallsToEachBox {
     // i:2 -> abs(2-i) + abs(4-i) + abs(5-i) = 5
     // i:3 -> abs(2-i) + abs(4-i) + abs(5-i) =
     //             1   +     1    +   2      = 4
+    //         abs((2+4+5) - 3*3)
+    //
 
-    // 178ms, beats 6%? What?
+    public static int[] minOperationsFaster(String boxes) {
+
+        // in one pass
+        // get indexes of 1 -> 2,4,5
+        // get indexes of 0 -? 0,1,3,6
+
+        // loop again
+
+        return null;
+    }
+
+    // 178ms, beats 6%? What? - O(n^2)
     public static int[] minOperations(String boxes) {
         char[] charBoxes = boxes.toCharArray();
         int len = charBoxes.length;
