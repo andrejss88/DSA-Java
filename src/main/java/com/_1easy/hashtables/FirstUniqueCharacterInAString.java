@@ -23,7 +23,7 @@ public class FirstUniqueCharacterInAString {
         System.out.println(firstUniqCharSlower("loveleetcode"));
     }
 
-    // NOT my solution - should've gotte this one
+    // NOT my solution - should've gotten this one
     // 6ms, Beats 82%
     public int firstUniqCharFastest(String s) {
         int[] freq = new int[26];

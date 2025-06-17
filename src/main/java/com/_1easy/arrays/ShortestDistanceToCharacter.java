@@ -71,6 +71,3 @@ public class ShortestDistanceToCharacter {
         return distances;
     }
 }
-
-// cases for s.length 1
-//        if (wordLen == 1) return new int[]{0};
