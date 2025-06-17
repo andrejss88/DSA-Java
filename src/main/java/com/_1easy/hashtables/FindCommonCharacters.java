@@ -19,11 +19,17 @@ import java.util.List;
 public class FindCommonCharacters {
 
     public static void main(String[] args) {
+
+        // ["a","b"]
+        System.out.println(commonChars(new String[]{"dadaabaa", "bdaaabcc", "abccddbb", "bbaacdba", "ababbbab", "ccddbbba", "bbdabbda", "bdabaacb"}));
+
+        System.out.println(commonChars(new String[]{"bbddabab", "cbcddbdd", "bbcadcab", "dabcacad", "cddcacbc", "ccbdbcba", "cbddaccc", "accdcdbb"}));
         System.out.println(commonChars(new String[]{"acabcddd", "bcbdbcbd", "baddbadb", "cbdddcac", "aacbcccd", "ccccddda", "cababaab", "addcaccd"}));
         System.out.println(commonChars(new String[]{"cool", "lock", "cook"}));
         System.out.println(commonChars(new String[]{"bella", "label", "roller"}));
     }
 
+    // 3ms, Beats 88% Runtime
     public static List<String> commonChars(String[] words) {
         int wordCount = words.length;
         int[][] matrix = new int[wordCount][26];
@@ -44,20 +50,18 @@ public class FindCommonCharacters {
         for (int col = 0; col < numCols; col++) {
             int firstVal = matrix[0][col];
             if (firstVal == 0) continue;
-            int valSum = firstVal;
+            int letterCount = firstVal;  // assume first val is smallest, overwrite later as needed
             for (int row = 1; row < numRows; row++) {
                 int otherVal = matrix[row][col];
                 if (otherVal == 0) {
-                    valSum = 0;
+                    letterCount = 0;
                     break;
                 }
-                valSum += otherVal;
+                letterCount = Math.min(letterCount, otherVal);
             }
-            if (valSum >= wordCount) {
-                int letterCount = valSum / wordCount;
-                char letter = (char) (col + 'a');
-                for (int i = 0; i < letterCount; i++) answer.add(String.valueOf(letter));
-            }
+
+            char letter = (char) (col + 'a');
+            for (int i = 0; i < letterCount; i++) answer.add(String.valueOf(letter));
         }
 
         return answer;
