@@ -6,7 +6,7 @@ public class FrequencyArray {
 
     public static void main(String[] args) {
 
-        // String
+        // String - only lower case letters
         String s = "abccddd";
         int[] strFreqArray = new int[26];
         for (int i = 0; i < s.length(); i++) {
@@ -15,6 +15,19 @@ public class FrequencyArray {
         }
 
         System.out.println("Char frequencies: " + Arrays.toString(strFreqArray)); // [1, 1, 2, 3, 0, 0, ...]
+
+        // String - lower and upper
+        int lowerLetterOffset = 26;
+        int[] freqArr = new int[52];
+
+        for (char letter : "acYZ".toCharArray()) {
+            if (Character.isUpperCase(letter)) {
+                freqArr[letter - 'A' + lowerLetterOffset]++;
+            } else {
+                freqArr[letter - 'a']++;
+            }
+        }
+        System.out.println("Char lower/upper:" + Arrays.toString(freqArr));  // [1,0,1....1,1]
 
 
         // Number - BEST USED ON CONSTRAINTS 0<=n
