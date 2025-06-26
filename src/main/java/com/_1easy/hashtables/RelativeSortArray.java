@@ -20,11 +20,41 @@ public class RelativeSortArray {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(
-                relativeSortArray(new int[]{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, new int[]{2, 1, 4, 3, 9, 6}))
+                relativeSortArrayFreqArr(new int[]{2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19}, new int[]{2, 1, 4, 3, 9, 6}))
         );
         System.out.println(Arrays.toString(
-                relativeSortArray(new int[]{28, 6, 22, 8, 44, 17}, new int[]{22, 28, 8, 6}))
+                relativeSortArrayFreqArr(new int[]{28, 6, 22, 8, 44, 17}, new int[]{22, 28, 8, 6}))
         );
+    }
+
+    // 0ms, Beats 100%
+    public static int[] relativeSortArrayFreqArr(int[] arr1, int[] arr2) {
+        int[] freqArray = new int[1001];
+        for (int num : arr1) {
+            freqArray[num]++;
+        }
+
+        int indx = 0;
+        int[] answer = new int[arr1.length];
+        for (int num : arr2) {
+            int frequency = freqArray[num];
+            for (int i = 0; i < frequency; i++) {
+                answer[indx++] = num;
+            }
+            freqArray[num] = 0;
+        }
+
+        // one more loop over freqArr - add all non-0s
+        for (int i = 0; i < freqArray.length; i++) {
+            int frequency = freqArray[i];
+            if (frequency != 0) {
+                for (int j = 0; j < frequency; j++) {
+                    answer[indx++] = i;
+                }
+            }
+        }
+
+        return answer;
     }
 
     // 2ms, Beats 68%
